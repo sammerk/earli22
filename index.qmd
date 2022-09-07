@@ -83,7 +83,7 @@ ggsave("img/sash.svg", sash)
 <center>[{{< fa magnifying-glass >}}]{.imp} Study 2 - Noticing statistical entities</center>
 
 ::: footer
-Slides: https://bit.ly/mbo-earli22
+Slides: https://sammerk.github.io/earli22
 :::
 
 ::: {.notes}
@@ -99,7 +99,7 @@ Slides: https://bit.ly/mbo-earli22
 :::
 
 ::: footer
-Slides: https://bit.ly/mbo-earli22
+Slides: https://sammerk.github.io/earli22
 :::
 
 ## <!-- Theo Mot--> {.smaller auto-animate="true"}
@@ -127,6 +127,10 @@ All these models highlight a process of sensemaking which describes the transfor
 e.g. If teachers can not identify in which area 
 :::
 
+::: footer
+Slides: https://sammerk.github.io/earli22
+:::
+
 ## <!-- Study 1--> {auto-animate="true"}
 
 ::: {style="margin-top: 262px;font-size: 3.5em; color:#8cd000; margin-left: 110px;"}
@@ -151,6 +155,10 @@ Study 1 {{< fa scale-unbalanced >}}
 ![](img/VERA_SS2.png){.fragment width="600"}
 :::
 
+::: footer
+Slides: https://sammerk.github.io/earli22
+:::
+
 ## Study 1: (Open) Materials {{< ai open-materials >}} {.smaller}
 
 -   Interactive {{< fa brands r-project >}}-shiny app [@chang2016]
@@ -162,8 +170,9 @@ Study 1 {{< fa scale-unbalanced >}}
     -   To measure **accuracy** and efficiency: *»Please use the graphs and the expert assessment for the left graph to assess the differences in means for the right graph \[...\]«*
 
 ::: footer
-All materials at the {{< ai osf >}} OSF [{{< fa external-link-square-alt >}}](https://osf.io/m2k9b/?view_only=4230ab731d7a414f83da033c22487789) - (Slides at https://bit.ly/mbo-earli22)
+All materials at the {{< ai osf >}} OSF [{{< fa external-link-square-alt >}}](https://osf.io/m2k9b/?view_only=4230ab731d7a414f83da033c22487789) - (Slides at https://sammerk.github.io/earli22)
 :::
+
 
 ##  {background-iframe="https://apps.samuel-merk.de/Unterschiede_einschaetzen" background-interactive="true"}
 
@@ -181,6 +190,11 @@ All materials at the {{< ai osf >}} OSF [{{< fa external-link-square-alt >}}](ht
     -   $M_{teaching\;years} = 9.4$, $SD_{teaching\;years} = 9.2$
     -   32 {{< fa venus >}},
     -   31 had taught at least one STEM subject
+    
+    
+::: footer
+Slides: https://sammerk.github.io/earli22
+:::    
 
 ## Study 1: Results - Sensitivity
 ::: {layout-nrow=1 layout-valign="center"}
