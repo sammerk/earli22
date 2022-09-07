@@ -1,0 +1,308 @@
+---
+title: "From Data to Information"
+author: "Samuel Merk, Sarah Bez, Jana Groß Ophoff"
+subtitle: "Teacher’s Perceptions of Graphical Feedback"
+format: 
+  revealjs:
+    title-slide-attributes:
+      data-background-image: img/sash.svg
+      data-background-size: 30%
+      data-background-position: 0 0
+    slide-number: true
+    controls: true
+    logo: https://drive.google.com/uc?export=view&id=1Eoy1slqV_DDgG50f3V6tc6QvFnhCBE1H
+    theme: [dark, css/custom.scss]
+    chalkboard:
+      theme: whiteboard
+      boardmarker-width: 3
+      buttons: true
+      chalk-effect: 0
+    fullscreen: true
+    pdfexport: true
+bibliography: references.bib
+editor_options: 
+  chunk_output_type: console
+---
+::: {.notes}
+* Yes thank you Jana for this kind introduction and ...
+* Welcome everybody to our talk "From data to Information - ..."
+:::
+
+## From Data to Information - Agenda {.center}
+
+```{r hidden chunk which creates template stuff}
+#| echo: false
+
+library(fontawesome)
+library(tidyverse)
+# Change css to lecker PH green
+if(!dir.exists("css"))
+dir.create("css")
+fileConn<-file("css/custom.scss")
+writeLines(c("/*-- scss:defaults --*/",
+             "$link-color: #8cd000 !default;"), fileConn)
+close(fileConn)
+
+# create sash with URL
+sash <- 
+  ggplot() + 
+  geom_polygon(data = tibble(x = c(0,4,5.5,0),
+                             y = c(1,5,5,-.5)),
+               aes(x,y), fill = "#8cd000") + 
+  coord_fixed() +
+  annotate(geom = "text", 
+           label = "bit.ly/mbo-earli22", 
+           x = .8, y = .8, 
+           angle = 45,
+           hjust = 0, vjust = 0,
+           size = 10,
+           color = "white",
+           family="Courier") +
+ theme_void() + 
+ theme(plot.margin = margin(-2,0,0,-12, unit = "cm"))
+ggsave("img/sash.svg", sash)
+```
+
+```{css}
+.imp {
+  color: #8cd000;
+}
+```
+
+
+<center>
+
+<br> [{{< fa book-open >}}]{.imp} Theoretical motivation of the two studies\
+<br>
+
+<center>
+
+[{{< fa scale-unbalanced >}}]{.imp} Study 1 - Sensitivity, efficiency and accuracy\
+<br>
+
+<center>[{{< fa magnifying-glass >}}]{.imp} Study 2 - Noticing statistical entities</center>
+
+::: footer
+Slides: https://bit.ly/mbo-earli22
+:::
+
+::: {.notes}
+* In this talk, Sarah and I want first give you some theoretical back ground, but 🤣
+* Then, I will present the results of a confirmatory, hyothesis-testing, preregistered lab study, which aim at investigating ... and the sarah
+* and then Sarah
+:::
+
+## <!-- Theo Mot--> {auto-animate="true"}
+
+::: {style="margin-top: 300px; font-size: 2em; color:#8cd000; margin-left: 110px;"}
+[Theoretical motivation {{< fa book-open >}}]{.imp}
+:::
+
+::: footer
+Slides: https://bit.ly/mbo-earli22
+:::
+
+## <!-- Theo Mot--> {.smaller auto-animate="true"}
+
+::: {style="margin-top: 0px;font-size: 1.5em; color:#ffffff; margin-left: 0px;"}
+Theoretical motivation [{{< fa book-open >}}]{.imp}
+:::
+
+. . .
+
+Several theoretical frameworks posit a sequential nature of the DBDM process [e.g. @helmke2005; @mandinach2016a; @marsh2012; @schildkamp2019a] <br><br>
+
+::: r-stack
+![](img/Helmke.png){.fragment width="450"}
+
+![](img/Mandinach.png){.fragment width="420"}
+
+![](img/Schildkamp.png){.fragment width="351"}
+
+![](img/Marsh.png){.fragment width="410"}
+:::
+
+::: {.notes}
+All these models highlight a process of sensemaking which describes the transformation of the raw or aggregated data to actianable knowledge.
+e.g. If teachers can not identify in which area 
+:::
+
+## <!-- Study 1--> {auto-animate="true"}
+
+::: {style="margin-top: 262px;font-size: 3.5em; color:#8cd000; margin-left: 110px;"}
+Study 1 {{< fa scale-unbalanced >}}
+:::
+
+## <!-- Study 1--> {.smaller auto-animate="true"}
+
+::: {style="margin-top: 0px;font-size: 1.5em; color:#ffffff; margin-left: 0px;"}
+Study 1 {{< fa scale-unbalanced >}}
+:::
+
+. . .
+
+> In Study 1 we focused on how teachers can learn from statewide test data about strengths and weaknesses of their class performance by investigating how sensitively, efficiently, and accurately they are able to judge the magnitude of mean differences.
+
+<br><br>
+
+::: r-stack
+![](img/VERA_SS1.png){.fragment width="650"}
+
+![](img/VERA_SS2.png){.fragment width="600"}
+:::
+
+## Study 1: (Open) Materials {{< ai open-materials >}} {.smaller}
+
+-   Interactive {{< fa brands r-project >}}-shiny app [@chang2016]
+-   With ecological valid data from state-wide testing
+-   Encoded in all graph types found in german report sheets *(stacked, clustered and facetted bar garphs, jitter graphs with means, beeswarm graphs)*
+![](img/Figure 1.png){ width="500"}    
+-   Two rating tasks:
+    -   To measure **sensitivity** and **efficiency**: *»Do you rate the displayed class as inferior, approximately the same, or superior to the displayed state?«*
+    -   To measure **accuracy** and efficiency: *»Please use the graphs and the expert assessment for the left graph to assess the differences in means for the right graph \[...\]«*
+
+::: footer
+All materials at the {{< ai osf >}} OSF [{{< fa external-link-square-alt >}}](https://osf.io/m2k9b/?view_only=4230ab731d7a414f83da033c22487789) - (Slides at https://bit.ly/mbo-earli22)
+:::
+
+##  {background-iframe="https://apps.samuel-merk.de/Unterschiede_einschaetzen" background-interactive="true"}
+
+
+## Study 1: Participants {{< fa users >}} {.smaller}
+
+-   Sample 1:
+    -   $N = 83$ pre-service teachers
+    -   $M_{age} = 24.9$, $SD_{age} = 8.48$
+    -   51 {{< fa venus >}},
+    -   33 were enrolled at least in one STEM subject
+-   Sample 2:
+    -   $N = 56$ in-service teachers
+    -   $M_{age} = 37.6$, $SD_{age} = 9.2$
+    -   $M_{teaching\;years} = 9.4$, $SD_{teaching\;years} = 9.2$
+    -   32 {{< fa venus >}},
+    -   31 had taught at least one STEM subject
+
+## Study 1: Results - Sensitivity
+::: {layout-nrow=1 layout-valign="center"}
+[![Sample 1](img/Figure_4.svg)](img/Figure_4.svg)
+
+[![Sample 2](img/Figure_6.svg)](img/Figure_6.svg)
+:::
+
+
+## Study 1: Results - Efficiency
+::: {layout-nrow=1 layout-valign="center"}
+[![Sample 1](img/Figure_3.png)](img/Figure_3.png)
+
+[![Sample 2](img/Figure_7.svg)](img/Figure_7.svg)
+:::
+
+
+## Study 1: Results - Accuracy 
+::: {layout-nrow=1}
+[![Sample 2](img/Figure_8.svg)](img/Figure_8.svg){fig-align="center"}
+:::
+
+## Study 1: Take Home - Limitations {.smaller}
+* Take Home:
+    * (Pre-service) Teachers percepted mean differences accurate but insensitive.
+    * (Pre-service) Teachers quickly improved their efficiency.
+    * Graph types substancially influence sensitivity & effectivity.
+
+. . . 
+
+* Limitations:
+    * Convenience samples
+    * Mean difference judgements are a small facet of DBDM
+
+## <!-- Study 2--> {auto-animate="true"}
+
+::: {style="margin-top: 262px;font-size: 3.5em; color:#8cd000; margin-left: 110px;"}
+Study 2 {{< fa magnifying-glass >}}
+:::
+
+## <!-- Study 2--> {.smaller auto-animate="true"}
+
+::: {style="margin-top: 0px;font-size: 1.5em; color:#ffffff; margin-left: 0px;"}
+Study 2 {{< fa magnifying-glass >}}
+:::
+
+. . .
+
+> In Study 2 we focused on how teachers notice statistical entities in artificial feedback data.
+
+. . .
+
+-   Participants {{< fa users >}}
+    -   $N = 47$ in-service teachers
+    -   $M_{age} = 37.5$, $SD_{age} = 9.4$
+    -   $M_{teaching\;years} = 9.8$, $SD_{teaching\;years} = 9.2$
+    -   30 {{< fa venus >}}
+
+::: incremental
+-   Design
+    -   Exploratory think-aloud study
+    -   "Critical friend"-framing\
+    -   **Thinking aloud while using an interactive dashboard with artificial grades that include statistical entities**
+:::
+
+##  {background-iframe="https://apps.samuel-merk.de/Kollegiale_Dateninterpretation" background-interactive="true"}
+
+## Rating process of the screencasts and think-aloud protocols {.smaller}
+
+![Ratings by 2 trained raters on the basis of a deduktive-inductive developed rating scheme (Krippendorffs *α* \>.63, skewness: *α* =.41), consensus codings were done](img/screenshot_rating_tpod2.png)
+
+## <!-- Results--> {auto-animate="true"}
+
+::: {style="margin-top: 262px;font-size: 3.5em; color:#8cd000; margin-left: 110px;"}
+Results {{< fa chart-column >}}
+:::
+
+## <!-- Results--> {auto-animate="true"}
+
+::: {style="margin-top: 0px;font-size: 1.5em; color:#ffffff; margin-left: 0px;"}
+Results {{< fa chart-column >}}
+:::
+
+![](img/TPOD_2_statistical%20entities%20described%20in%20TA.png)
+
+## Person-centered analysis
+
+::: incremental
+-   Exploratory analyses with different hierarchical cluster algorithms\
+-   Visual inspections based on heatmaps and dendrograms\
+:::
+
+------------------------------------------------------------------------
+
+##  {background-image="img/heatmap_study2.png" background-size="contain"}
+
+## Discussion of Study 2 {.smaller}
+
+::: incremental
+-   Key results
+    -   Teachers notice dispersion mainly nonspecifically or as a minimum and maximum but not as distance from the mean\
+    -   Remarkable between-person variance\
+-   Follow-up analysis
+    -   Person-centered analysis with graph literacy ratings and data literacy test data\
+-   Limitation: Which inferences can be drawn from think-aloud studies? [@leighton2017]
+:::
+
+## General discussion and outlook
+
+::: incremental
+-   Follow-up studies
+    -   Data literacy interventions with focus on data reception
+    -   Experiments on visualizations that are measurable helpful for teachers (e.g., accuracy, efficacy)
+-   Relevant to consider
+    -   Appropriate data perception is necessary but not sufficient for DBDM (→ conceptual DBDM models)
+    -   Successful interplay of teachers and technology [@mandinach2021]
+:::
+
+##  {.center}
+
+::: {.fragment .highlight-green}
+<center><font style='font-size:5em'>{{< fa comments >}}</font><br> <font style='font-size:1.3em'>Thank you for your attention! </font></center>
+:::
+
+## References {.smaller}
