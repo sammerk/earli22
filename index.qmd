@@ -23,10 +23,6 @@ bibliography: references.bib
 editor_options: 
   chunk_output_type: console
 ---
-::: {.notes}
-* Yes thank you Jana for this kind introduction and ...
-* Welcome everybody to our talk "From data to Information - ..."
-:::
 
 ## From Data to Information - Agenda {.center}
 
@@ -67,6 +63,14 @@ ggsave("img/sash.svg", sash)
 .imp {
   color: #8cd000;
 }
+
+div.callout-note {
+    border-left-color: #8cd000 !important;
+}
+
+div.callout-note.callout-style-default .callout-caption {
+    background-color: #acff00b0;
+}
 ```
 
 
@@ -86,11 +90,6 @@ ggsave("img/sash.svg", sash)
 Slides: https://sammerk.github.io/earli22
 :::
 
-::: {.notes}
-* In this talk, Sarah and I want first give you some theoretical back ground, but 🤣
-* Then, I will present the results of a confirmatory, hyothesis-testing, preregistered lab study, which aim at investigating ... and the sarah
-* and then Sarah
-:::
 
 ## <!-- Theo Mot--> {auto-animate="true"}
 
@@ -318,5 +317,17 @@ Results {{< fa chart-column >}}
 ::: {.fragment .highlight-green}
 <center><font style='font-size:5em'>{{< fa comments >}}</font><br> <font style='font-size:1.3em'>Thank you for your attention! </font></center>
 :::
+
+:::{.callout-note icon=false}
+## Contact:
+
+{{< fa envelope >}} sarah.bez@uni-tuebingen.de  
+
+{{< fa envelope >}} jana.grossophoff@ph-vorarlberg.ac.at  
+
+{{< fa envelope >}} samuel.merk@ph-karlsruhe.de
+
+:::
+
 
 ## References {.smaller}
