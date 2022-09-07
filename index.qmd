@@ -305,7 +305,7 @@ Results {{< fa chart-column >}}
 
 ::: incremental
 -   Follow-up studies
-    -   Data literacy interventions with focus on data reception
+    -   Data literacy interventions with focus on data perception
     -   Experiments on visualizations that are measurable helpful for teachers (e.g., accuracy, efficacy)
 -   Relevant to consider
     -   Appropriate data perception is necessary but not sufficient for DBDM (→ conceptual DBDM models)
